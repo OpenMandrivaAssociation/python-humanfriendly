@@ -12,14 +12,14 @@ URL:            https://%{srcname}.readthedocs.io
 Source0:        https://github.com/xolox/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildArch:      noarch
-BuildRequires:  python%{python3_pkgversion}-devel
-BuildRequires:  python%{python3_pkgversion}-setuptools
-%{?python_provide:%python_provide python%{python3_pkgversion}-%{srcname}}
+BuildRequires:  python-devel
+BuildRequires:  python-setuptools
+%{?python_provide:%python_provide python-%{srcname}}
 
 %if %{with tests}
-BuildRequires:  python%{python3_pkgversion}-capturer
-BuildRequires:  python%{python3_pkgversion}-coloredlogs
-BuildRequires:  python%{python3_pkgversion}-pytest
+BuildRequires:  python-capturer
+BuildRequires:  python-coloredlogs
+BuildRequires:  python-pytest
 %endif # with_tests
 
 %description
@@ -42,20 +42,6 @@ BuildRequires:  python%{python3_pkgversion}-sphinx
 
 %description doc
 HTML documentation for the '%{srcname}' Python module.
-
-%description -n python%{python3_pkgversion}-%{srcname}
-The functions and classes in the humanfriendly package can be used to make text
-interfaces more user friendly. Some example features:
-
-- Parsing and formatting numbers, file sizes, pathnames and timespans in
-  simple, human friendly formats.
-- Easy to use timers for long running operations, with human friendly
-  formatting of the resulting timespans.
-- Prompting the user to select a choice from a list of options by typing the
-  option's number or a unique substring of the option.
-- Terminal interaction including text styling (ANSI escape sequences), user
-  friendly rendering of usage messages and querying the terminal for its size.
-
 
 %prep
 %autosetup
