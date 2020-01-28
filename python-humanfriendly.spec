@@ -54,7 +54,7 @@ HTML documentation for the '%{srcname}' Python module.
 rm build/lib/%{srcname}/tests.py
 
 #sphinx-build-%{python_version} -nb html -d docs/build/doctrees docs docs/build/html
-rm docs/build/html/.buildinfo
+#rm docs/build/html/.buildinfo
 
 
 %install
