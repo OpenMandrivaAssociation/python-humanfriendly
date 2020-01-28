@@ -38,7 +38,7 @@ interfaces more user friendly. Some example features:
 
 %package doc
 Summary:        Documentation for the '%{srcname}' Python module
-BuildRequires:  python%{python3_pkgversion}-sphinx
+BuildRequires:  python-sphinx
 
 %description doc
 HTML documentation for the '%{srcname}' Python module.
@@ -53,8 +53,8 @@ HTML documentation for the '%{srcname}' Python module.
 # Don't install the tests.py
 rm build/lib/%{srcname}/tests.py
 
-#sphinx-build-%{python3_version} -nb html -d docs/build/doctrees docs docs/build/html
-#rm docs/build/html/.buildinfo
+sphinx-build-%{python_version} -nb html -d docs/build/doctrees docs docs/build/html
+rm docs/build/html/.buildinfo
 
 
 %install
