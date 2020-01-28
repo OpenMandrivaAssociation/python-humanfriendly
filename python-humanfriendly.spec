@@ -69,7 +69,7 @@ PYTHONUNBUFFERED=1 py.test-%{python_version} %{srcname}/tests.py
 
 %files doc
 %license LICENSE.txt
-%doc docs/build/html
+#doc docs/build/html
 
 %files
 %license LICENSE.txt
