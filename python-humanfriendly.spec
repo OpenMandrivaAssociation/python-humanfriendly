@@ -3,7 +3,7 @@
 %global srcname humanfriendly
 
 Name:           python-%{srcname}
-Version:        4.18
+Version:        8.2
 Release:        1
 Summary:        Human friendly output for text interfaces using Python
 
