@@ -3,8 +3,8 @@
 %global srcname humanfriendly
 
 Name:           python-%{srcname}
-Version:        8.2
-Release:        2
+Version:        10.0
+Release:        1
 Summary:        Human friendly output for text interfaces using Python
 
 License:        MIT
